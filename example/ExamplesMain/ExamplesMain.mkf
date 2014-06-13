@@ -1,0 +1,46 @@
+option strict
+
+files
+{
+    examples.defines.txt
+
+    (src)
+    ExamplesMain.h
+}
+
+if {{ defined EXAMPLE_USE_GX }}
+{
+    files
+    {
+        (src/IwGX)
+        ExamplesMain.cpp
+        Buttons.cpp
+    }
+
+    subprojects
+    {
+        iwgx
+        iwgxfont
+    }
+}
+else
+{
+    files
+    {
+        ("src/s3eSurface")
+        ExamplesMain.cpp
+        Buttons.cpp
+    }
+}
+
+if {{ not defined EXAMPLE_OVERRIDE_MAIN }}
+{
+    files
+    {
+        (src)
+        main.cpp
+    }
+}
+
+
+includepath src

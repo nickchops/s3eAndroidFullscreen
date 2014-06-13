@@ -1,0 +1,2 @@
+EXAMPLE_OVERRIDE_MAIN	Define to allow the example to use its own main() function
+EXAMPLE_USE_GX          Render the example framework using IwGX rather than s3eSurface

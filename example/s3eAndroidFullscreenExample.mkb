@@ -1,0 +1,12 @@
+#!/usr/bin/env mkb
+files
+{
+    s3eAndroidFullscreenExample.cpp
+}
+
+subprojects
+{
+    ExamplesMain
+    s3eAndroidFullscreen
+    s3eDialog
+}
