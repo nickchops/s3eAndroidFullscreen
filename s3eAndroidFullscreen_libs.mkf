@@ -1,0 +1,11 @@
+# Subproject file for the generated libs used by s3eAndroidFullscreen.
+# Included via s3eAndroidFullscreen for use in C++ projects and when building
+# Included in quick/quick_prebuilt.mkf so Quick projects just pick up libs
+# as CPPs etc are already built into the tolua++ generated wrappers
+# (quick_prebuilt.mkf doesnt actually pull in the C++ extension subproject)
+
+deployments
+{
+    android-external-jars="lib/android/s3eAndroidFullscreen.jar"
+    android-so="lib/android/libs3eAndroidFullscreen.so"
+}
