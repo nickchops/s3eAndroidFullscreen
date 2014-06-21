@@ -96,7 +96,7 @@ it but make sure you back it all up when updating the SDK!
         #http://github.com/nickchops/s3eAndroidFullscreen
         files
         {
-            ($MARMALADE_ROOT/extensions/s3eAndroidFullscreen/quick)
+            ("$MARMALADE_ROOT/extensions/s3eAndroidFullscreen/quick")
             QAndroidFullscreen.h
             QAndroidFullscreen.cpp
         }
@@ -112,6 +112,7 @@ it but make sure you back it all up when updating the SDK!
    quick/quick_prebuilt.mkf:
 
         subproject "$MARMALADE_ROOT/extensions/s3eAndroidFullscreen/s3eAndroidFullscreen_libs"
+7. If updating an existing project, you'll likely need to delete the project's 'build_temp' folder. This is so that the Hub will regenerate all the necessary deployment scripts and include the new fullscreen extension.
 
 **NB:**
 
