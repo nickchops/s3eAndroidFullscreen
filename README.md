@@ -171,7 +171,7 @@ Issues
   of the box). Untested!
 
 ------------------------------------------------------------------------------------------
-(C) 2013 Nick Smith.
+(C) 2014 Nick Smith.
 
 All code is provided under the MIT license unless stated otherwise:
 
