@@ -38,11 +38,12 @@ In game code just call this to enter sticky immersive mode:
 
     s3eAndroidFullscreenOn();
 
-If user is running 40-4.3 OS:
+If user is running 4.0-4.3 Android OS:
 
     too bad :'(
 
 By default, the screen view hierarchy (inc GL view) will:
+
 - start adjusted to fit the nav bar (not fullscreen)
 - resize to fullscreen when the nav bar is hidden
 - **not** resize back when the bar is re-shown (still fullscreen, now obscured by nav bar)
@@ -77,76 +78,62 @@ Marmalade Quick wrapper
 
 The *quick* folder contains C++ wrappers that tolua++ can process in order to generate
 Quick Lua bindings. To use the Quick version you'll need to update some of the Quick
-installation's files and either re-build quick_prebuilt or use my binaries. All paths
+installation's files and re-build quick_prebuilt. All paths
 below are within the Marmalade sdk folder (or .app on Mac) This also assumes you've
 put the extension in the SDK's *extensions* folder - that's the easiest way to manage
 it but make sure you back it all up when updating the SDK!
 
-**To include and build Quick version of the extension**:
 
-1. Leave the wrapper files where they are (dont copy them into sdk/quick/include etc.)
-2. To allow tolua++ to generate wrappers, add the following to quick/quickuser_tolua.pkg:
+Prerequisits
+~~~~~~~~~~~~
+
+1. Marmalade SDK 7.4 or newer is needed for Quick extension improvemenmts.
+   
+2. Place the whole s3eAndroidFullscreen folder in sdk/extensions
+   
+2. You need scripts for rebuilding Quick binaries. Get these from
+   https://github.com/nickchops/MarmaladeQuickRebuildScripts Copy those to the
+   root *quick* folder in the SDK.
+
+   
+Setup: Add and build this wrapper into Quick
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TODO: go remove the need for _libs folder as shouldnt be necessary anymore
+
+3. Edit quick/quickuser_tolua.pkg and add this new line:
 
         $cfile "../extensions/s3eAndroidFullscreen/quick/QAndroidFullscreen.h"
 
-3. Run < Marmalade >/quick/quickuser_tolua(.bat) to generate lua->C++ bindings
-4. To allow the extension to be built into Quick's binaries, add the following to the end
-   of quickuser.mkf:
+4. Edit quick/quickuser.mkf and add the following to the 'files' block so that
+   the wrappers can be built into the Quick binaries::
 
-        #http://github.com/nickchops/s3eAndroidFullscreen
-        files
-        {
-            ("$MARMALADE_ROOT/extensions/s3eAndroidFullscreen/quick")
-            QAndroidFullscreen.h
-            QAndroidFullscreen.cpp
-        }
+        ("$MARMALADE_ROOT/extensions/s3eAndroidFullscreen/quick")
+        s3eAndroidFullscreen.h
+        s3eAndroidFullscreen.cpp
+
+5. In quickuser.mkf, also add s3eAndroidFullscreen to the 'subprojects' block:
+
         subprojects
         {
             s3eAndroidFullscreen
         }
+        
+   This allows C++ parts of the actual extension to be built into Quick's
+   binaries.
+   
+5. Run quick/quickuser_tolua.bat to generate Lua bindings.
 
-5. Re-build quick_prebuilt.mkb for all architectures to build the bindings and C++
-   extension auto-generated parts into the binaries (quick/target/arm/quick_prebuilt.s3e
+6. Rebuild the Quick binaries by running the scripts (build_quick_prebuilt.bat
    etc.)
-6. Make the C++/Java libs get included in Android deployments by adding the following to
-   quick/quick_prebuilt.mkf:
 
-        subproject "$MARMALADE_ROOT/extensions/s3eAndroidFullscreen/s3eAndroidFullscreen_libs"
-7. If updating an existing project, you'll likely need to delete the project's 'build_temp' folder. This is so that the Hub will regenerate all the necessary deployment scripts and include the new fullscreen extension.
+7. If updating an existing project, you'll likely need to delete the project's
+   'build_temp' folder. This is so that the Hub will regenerate all the
+   necessary deployment scripts and include the new extension.
+   
 
-**NB:**
-
-If running marmalade 7.3 or older, you might find steps 3 & 5 not so trivial!
-
-For step (3), if you've never used tolua++ before you'll need to set it up:
-
-- On Mac:
- 1. Extract modules/third_party/cocos2dx/tools/tolua++/tolua++.Mac.zip (you'll need to do
-    "Show Package Contents" on Applications/Marmalade.app)
- 2. Copy tolua.++ to < Marmalade >/quick/tools
- 3. Edit quickuser_tolua and make sure it points to tools/tolua++
-- On PC:
- 1. create a new text file called quickuser_tolua.bat in the root quick folder
- 2. add the following to the file:
-    tools\tolua++ -o "quickuser_tolua.cpp" "quickuser_tolua.pkg"
-
-For step (5), in order to build quick binaries the easiest option is:
-
-- Open the MKB with Xcode/Visual Studio
-- Build for ARM and x86 debug and release
-- This will output both the ARM and x86 versions to quick/target/win or quick/target/osx..
-  but you want the ARM ones to be in the arm folder!
-- So, manually move the ARM builds (ending in .s3e) from win or osx into quick/target/arm
-- You'll need to use a PC to build Windows, Windows Phone and Android x86/MIPS targets
-- You'll need to use a Mac to build OSX
-
-I've supplied builds of the Mac x86 and cross-platform ARM Quick binaries in
-quick/target.zip No Windows ones yet as my Windows install is bodged atm. There's an odd
-bug with these binaries that displaying any label nodes (director:createLabel) without
-explicitly setting a font will cause the Simulator to crash! Note that I'm explicitly
-setting font="fonts/Default.fnt" in the example. Weird.
-
-**To use the Quick APIs**:
+To use the Quick APIs
+~~~~~~~~~~~~~~~~~~~~~
 
 - Look in s3eAndroidFullscreen/quick/QAndroidFullscreen.h
 - Use namespace.function() to call functions, with true/false for params, e.g.
