@@ -1,0 +1,13 @@
+
+# Simple project to include extension and quick wrapper files
+
+subprojects
+{
+    s3eAndroidFullscreen
+}
+
+files
+{
+    QAndroidFullscreen.h
+    QAndroidFullscreen.cpp
+}

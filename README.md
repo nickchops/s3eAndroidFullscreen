@@ -25,12 +25,25 @@ nav bar and keep it hidden. Users can then swipe onto the screen to re-show the 
 Android docs: http://developer.android.com/training/system-ui/immersive.html
 
 
-To use
-------
+Setup for C++ and Quick
+-----------------------
 
-Put extension in < Marmalade >/extensions
+Add s3eAndroidFullscreen's parent folder to your modules search path.
 
-In MKB add:
+Recommended: add your github root to global search. Then all SDK installs
+can pick up all your github projects! Put the following in
+< marmalade-root >/s3e/s3e-default.mkf:
+
+        options { module_paths="path/to/my/github/projects/root" }
+
+Lazy but hard to maintain option: Put whole s3eAndroidFullscreen folder in
+< Marmalade >/extensions
+
+
+To use from C++
+---------------
+
+In project MKB add:
 
     subproject s3eAndroidFullscreen
 
@@ -53,8 +66,8 @@ Sticky immersive mode is used by default when you call s3eAndroidFullscreenOn().
 immersive and stickyNavBar flags for other modes.
 
 
-To rebuild
-----------
+To rebuild for C++ if you edit extension source
+-----------------------------------------------
 
 You need the Android level 19 (4.4) library - android.jar - in order to rebuild the
 Java part of the extension.
@@ -78,62 +91,48 @@ Marmalade Quick wrapper
 
 The *quick* folder contains C++ wrappers that tolua++ can process in order to generate
 Quick Lua bindings. To use the Quick version you'll need to update some of the Quick
-installation's files and re-build quick_prebuilt. All paths
+installation's files and re-build quick binaries. All paths
 below are within the Marmalade sdk folder (or .app on Mac) This also assumes you've
-put the extension in the SDK's *extensions* folder - that's the easiest way to manage
-it but make sure you back it all up when updating the SDK!
+put the extension on global modules path or copied to sdk/extensions.
 
 
-Prerequisits
-~~~~~~~~~~~~
+### Prerequisites
 
 1. Marmalade SDK 7.4 or newer is needed for Quick extension improvemenmts.
-   
-2. Place the whole s3eAndroidFullscreen folder in sdk/extensions
    
 2. You need scripts for rebuilding Quick binaries. Get these from
    https://github.com/nickchops/MarmaladeQuickRebuildScripts Copy those to the
    root *quick* folder in the SDK.
 
    
-Setup: Add and build this wrapper into Quick
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Setup: Add and build this wrapper into Quick
 
-TODO: go remove the need for _libs folder as shouldnt be necessary anymore
+1. Edit quick/quickuser_tolua.pkg and add this new line:
 
-3. Edit quick/quickuser_tolua.pkg and add this new line:
+        $cfile "path/to/you/copy/of/s3eAndroidFullscreen/quick/QAndroidFullscreen.h"
 
-        $cfile "../extensions/s3eAndroidFullscreen/quick/QAndroidFullscreen.h"
-
-4. Edit quick/quickuser.mkf and add the following to the 'files' block so that
-   the wrappers can be built into the Quick binaries::
-
-        ("$MARMALADE_ROOT/extensions/s3eAndroidFullscreen/quick")
-        s3eAndroidFullscreen.h
-        s3eAndroidFullscreen.cpp
-
-5. In quickuser.mkf, also add s3eAndroidFullscreen to the 'subprojects' block:
+2. In quickuser.mkf, also add the following to the 'subprojects' block:
 
         subprojects
         {
-            s3eAndroidFullscreen
+            s3eAndroidFullscreen/quick/QAndroidFullscreen
         }
         
-   This allows C++ parts of the actual extension to be built into Quick's
-   binaries.
+   This allows C++ parts of the actual extension plus the wrapper to be built
+    into Quick's binaries.
    
-5. Run quick/quickuser_tolua.bat to generate Lua bindings.
+3. Run quick/quickuser_tolua.bat to generate Lua bindings.
 
-6. Rebuild the Quick binaries by running the scripts (build_quick_prebuilt.bat
+4. Rebuild the Quick binaries by running the scripts (build_quick_prebuilt.bat
    etc.)
-
-7. If updating an existing project, you'll likely need to delete the project's
-   'build_temp' folder. This is so that the Hub will regenerate all the
-   necessary deployment scripts and include the new extension.
    
 
 To use the Quick APIs
 ~~~~~~~~~~~~~~~~~~~~~
+
+**NB:** If updating an existing project, you'll likely need to delete the
+project's 'build_temp' folder. This is so that the Hub will regenerate all the
+necessary deployment scripts and include the new extension.
 
 - Look in s3eAndroidFullscreen/quick/QAndroidFullscreen.h
 - Use namespace.function() to call functions, with true/false for params, e.g.
