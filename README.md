@@ -34,7 +34,7 @@ Recommended: add your github root to global search. Then all SDK installs
 can pick up all your github projects! Put the following in
 < marmalade-root >/s3e/s3e-default.mkf:
 
-        options { module_paths="path/to/my/github/projects/root" }
+        options { module_path="path/to/my/github/projects/root" }
 
 Lazy but hard to maintain option: Put whole s3eAndroidFullscreen folder in
 < Marmalade >/extensions
