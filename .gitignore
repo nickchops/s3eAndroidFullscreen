@@ -5,3 +5,6 @@
 **/resources-ram/**
 **/project_*
 **development.icf
+*build_*
+*.stamp
+mobdebug.lua

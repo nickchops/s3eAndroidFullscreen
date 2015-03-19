@@ -57,7 +57,7 @@ void s3eAndroidFullscreenRegisterExt()
     /*
      * Register the extension
      */
-    s3eEdkRegister("s3eAndroidFullscreen", funcPtrs, sizeof(funcPtrs), flags, s3eAndroidFullscreenInit, s3eAndroidFullscreenTerminate, 0);
+s3eEdkRegister("s3eAndroidFullscreen", funcPtrs, sizeof(funcPtrs), flags, s3eAndroidFullscreenInit, s3eAndroidFullscreenTerminate, 0);
 }
 
 #if !defined S3E_BUILD_S3ELOADER

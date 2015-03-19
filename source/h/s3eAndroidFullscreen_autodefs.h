@@ -11,4 +11,12 @@
 #define S3E_EXT_ANDROIDFULLSCREEN_NAME "s3eAndroidFullscreen"
 #define S3E_EXT_ANDROIDFULLSCREEN_HASH 0x3bb5b1c4
 
+#ifdef S3E_EXT_REGISTER
+#ifndef S3E_EXT_REGISTER_KEY
+#define S3E_EXT_REGISTER_KEY(name, num, key) S3E_EXT_REGISTER(name, num)
+#endif
+S3E_EXT_REGISTER("s3eAndroidFullscreen", 3)
+#else
+
+#endif /* S3E_EXT_REGISTER */
 #endif /* !S3EANDROIDFULLSCREEN_AUTODEFS_H */

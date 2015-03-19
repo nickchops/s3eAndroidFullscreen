@@ -1,0 +1,243 @@
+-- START TRACE TO FILE --
+tracing to: ''
+MarmaladeSDK v7.6.1 [426358q] (S3E Loader v4.40.0)
+Copyright (C) 2001-2014 Marmalade Technologies Ltd.
+System Info:
+ OS           : WINDOWS (3)
+ OS Version   : Windows 6.2 (6.2)
+ Device ID    : Windows Simulator (0x1)
+ Device Class : WINDOWS_GENERIC (3000)
+ Phone Number : 0044123456789
+ Unique ID    : SIMULATOR_ID
+ Device Name  : My Computer
+ Memory       : 1048576KiB
+19/03/15 16:04:16.824: [0x000011fc] DEVICE: Initialising FIBRE
+19/03/15 16:04:16.830: [0x000011fc] DEVICE: Initialising THREAD
+19/03/15 16:04:16.836: [0x000011fc] THREAD: s3eThreadCreateMain
+19/03/15 16:04:16.838: [0x00000fa0] DEVICE: Initialising SURFACE
+19/03/15 16:04:16.841: [0x00000fa0] SURFACE: s3eSurfaceSetup: PixelType=RGB888, pitch=0, ptr=0x00000000, blit=0
+19/03/15 16:04:16.843: [0x00000fa0] SURFACE: s3eSurfaceSetup: matches native type
+19/03/15 16:04:16.847: [0x00000fa0] SURFACE: s3eSurfaceSetup: no user surface needed
+19/03/15 16:04:16.849: [0x00000fa0] SURFACE: done s3eSurfaceInit: 800x600 p:1600 (800x600 p:1600) o:0
+19/03/15 16:04:16.851: [0x00000fa0] DEVICE: Initialising EXT
+19/03/15 16:04:16.853: [0x00000fa0] EXT: registering extension: s3eLibrary [0xe6dd6ce5]
+19/03/15 16:04:16.856: [0x00000fa0] EXT: registering extension: s3eExtLoadLibaray [0xf23d6d85]
+19/03/15 16:04:16.858: [0x00000fa0] EXT: registering extension: s3eCamera [0xa3e23039]
+19/03/15 16:04:16.860: [0x00000fa0] EXT: registering extension: s3eWindow [0xd31aa8a8]
+19/03/15 16:04:16.864: [0x00000fa0] EXT: registering extension: s3eVFS [0x17f48c9f]
+19/03/15 16:04:16.866: [0x00000fa0] EXT: registering extension: s3eContacts [0x5e39d2af]
+19/03/15 16:04:16.868: [0x00000fa0] EXT: registering extension: s3eSoundRecord [0x579dbf78]
+19/03/15 16:04:16.870: [0x00000fa0] EXT: registering extension: s3eTouchpad [0x1dbd7ce8]
+19/03/15 16:04:16.873: [0x00000fa0] EXT: registering extension: s3eCompass [0x40d632c6]
+19/03/15 16:04:16.875: [0x00000fa0] EXT: registering extension: Compass [0xd3653f1b]
+19/03/15 16:04:16.877: [0x00000fa0] EXT: registering extension: s3eDebugHeap [0xc667a795]
+19/03/15 16:04:16.880: [0x00000fa0] EXT: registering extension: s3eExtDebugHeap [0xff96de46]
+19/03/15 16:04:16.883: [0x00000fa0] EXT: registering extension: s3eClipboard [0xd68f3420]
+19/03/15 16:04:16.886: [0x00000fa0] EXT: registering extension: s3eOSExec [0xc121bcf7]
+19/03/15 16:04:16.888: [0x00000fa0] EXT: registering extension: s3eExtOSExec [0x20380948]
+19/03/15 16:04:16.890: [0x00000fa0] EXT: registering extension: s3eEval [0x167d1038]
+19/03/15 16:04:16.892: [0x00000fa0] EXT: registering extension: s3eExtEval [0xf0421449]
+19/03/15 16:04:16.895: [0x00000fa0] EXT: registering extension: s3eHighResTimer [0x41f2dedb]
+19/03/15 16:04:16.898: [0x00000fa0] EXT: registering extension: s3eOSReadString [0x9fe3ea45]
+19/03/15 16:04:16.900: [0x00000fa0] EXT: registering extension: s3eCameraCapture [0xd36aceed]
+19/03/15 16:04:16.902: [0x00000fa0] EXT: registering extension: s3eTestEmulatorConfig [0x4a0d0a4f]
+19/03/15 16:04:16.905: [0x00000fa0] EXT: registering extension: s3eThread [0xcc0b4a28]
+19/03/15 16:04:16.907: [0x00000fa0] EXT: registering extension: s3eSocketOpt [0x09cdcdec]
+19/03/15 16:04:16.909: [0x00000fa0] EXT: registering extension: s3eExtSocketOpt [0x42fd049d]
+19/03/15 16:04:16.912: [0x00000fa0] EXT: registering extension: s3eImagePicker [0xd2fc1d51]
+19/03/15 16:04:16.915: [0x00000fa0] EXT: registering extension: s3eTest [0x168503f0]
+19/03/15 16:04:16.917: [0x00000fa0] EXT: registering extension: s3eSMS [0x17f480c3]
+19/03/15 16:04:16.919: [0x00000fa0] EXT: registering extension: s3eMetrics [0x2bc8e047]
+19/03/15 16:04:16.922: [0x00000fa0] EXT: registering extension: Metrics [0xbe57ec9c]
+19/03/15 16:04:16.924: [0x00000fa0] EXT: registering extension: s3eLocation [0x91944229]
+19/03/15 16:04:16.926: [0x00000fa0] EXT: registering extension: Location [0x7604d91e]
+19/03/15 16:04:16.929: [0x00000fa0] EXT: registering extension: Win32Surface [0x909755c1]
+19/03/15 16:04:16.931: [0x00000fa0] EXT: registering extension: Win32UIProcessMessage [0x48f2a5ba]
+19/03/15 16:04:16.935: [0x00000fa0] EXT: registering extension: Win32DataDirChange [0xbfcfc057]
+19/03/15 16:04:16.939: [0x00000fa0] DEVICE: Initialising CONFIG
+19/03/15 16:04:16.942: [0x00000fa0] DEVICE: Initialising TIMER
+19/03/15 16:04:16.945: [0x00000fa0] DEVICE: Initialising COMPRESSION
+19/03/15 16:04:16.947: [0x00000fa0] DEVICE: DeviceInit done: services=0x0a216148
+19/03/15 16:04:16.950: [0x00000fa0] EXT: s3eExtGetHash: 0xd31aa8a8 [0x00000000 size=0]
+19/03/15 16:04:16.952: [0x00000fa0] EXT: initializing extension: s3eWindow
+19/03/15 16:04:16.954: [0x00000fa0] EXT: initializing extension: s3eWindow 0x5569ce90
+19/03/15 16:04:16.957: [0x00000fa0] DEVICE: SetupPaths: NULL
+19/03/15 16:04:16.959: [0x00000fa0] LOADER: ParseCommandLineData [--dll="C:\dev\nsmith_nickpro3\sdk\teams\services\feature1\quick\target\win\quick_prebuilt_d.s86" --data="C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resource
+19/03/15 16:04:16.962: [0x00000fa0] LOADER: setting [commandline]  dll=C:\dev\nsmith_nickpro3\sdk\teams\services\feature1\quick\target\win\quick_prebuilt_d.s86
+19/03/15 16:04:16.965: [0x00000fa0] LOADER: setting [commandline]  data=C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources
+19/03/15 16:04:16.967: [0x00000fa0] LOADER: setting [commandline]  app-icf1=C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\common.icf
+19/03/15 16:04:16.969: [0x00000fa0] LOADER: setting [commandline]  app-icf2=C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\app.icf
+19/03/15 16:04:16.972: [0x00000fa0] FILE: new filesystem: drive=0 type=0 ro=1 name=rom://
+19/03/15 16:04:16.974: [0x00000fa0] FILE: fs[00]: system[rom://] 'C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources'
+19/03/15 16:04:16.977: [0x00000fa0] FILE: fs[03]: system[raw://] ''
+19/03/15 16:04:16.980: [0x00000fa0] FILE: listed 2 active filesystems
+19/03/15 16:04:16.982: [0x00000fa0] FILE: new filesystem: drive=1 type=0 ro=0 name=ram://
+19/03/15 16:04:16.985: [0x00000fa0] FILE: fs[00]: system[rom://] 'C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources'
+19/03/15 16:04:16.987: [0x00000fa0] FILE: fs[01]: system[ram://] 'C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources-ram'
+19/03/15 16:04:16.990: [0x00000fa0] FILE: fs[03]: system[raw://] ''
+19/03/15 16:04:16.992: [0x00000fa0] FILE: listed 3 active filesystems
+19/03/15 16:04:17.000: [0x00000fa0] FILE: new filesystem: drive=0 type=0 ro=1 name=rom://
+19/03/15 16:04:17.005: [0x00000fa0] FILE: new filesystem: drive=1 type=0 ro=0 name=ram://
+19/03/15 16:04:17.016: [0x00000fa0] LOADER: Using data directory C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources as ROM drive
+19/03/15 16:04:17.019: [0x00000fa0] LOADER: Using directory C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources-ram as RAM drive
+19/03/15 16:04:17.025: [0x00000fa0] FILE: s3eFileOpen('raw://C:\dev\nsmith_nickpro3\sdk\teams\services\feature1\s3e/s3e.icf', 'rb') succeeded, id=1433790264 p=0x5575e738
+19/03/15 16:04:17.028: [0x00000fa0] LOADER: Loading config from: C:\dev\nsmith_nickpro3\sdk\teams\services\feature1\s3e/s3e.icf
+19/03/15 16:04:17.032: [0x00000fa0] FILE: s3eFileClose h=0x5575e738
+19/03/15 16:04:17.034: [0x00000fa0] LOADER: Loading app-icf from command line specified location C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\common.icf
+19/03/15 16:04:17.039: [0x00000fa0] FILE: s3eFileOpen('raw://C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\common.icf', 'rb') succeeded, id=1000 p=0x5575fe6c
+19/03/15 16:04:17.042: [0x00000fa0] LOADER: Loading config from: raw://C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\common.icf
+19/03/15 16:04:17.045: [0x00000fa0] FILE: s3eFileClose h=0x5575fe6c
+19/03/15 16:04:17.049: [0x00000fa0] FILE: s3eFileOpen('raw://C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\app.icf', 'rb') succeeded, id=1001 p=0x5575ff88
+19/03/15 16:04:17.052: [0x00000fa0] LOADER: Loading config from: raw://C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\app.icf
+19/03/15 16:04:17.054: [0x00000fa0] FILE: s3eFileClose h=0x5575ff88
+19/03/15 16:04:17.057: [0x00000fa0] LOADER: ParseCommandLineData [--dll="C:\dev\nsmith_nickpro3\sdk\teams\services\feature1\quick\target\win\quick_prebuilt_d.s86" --data="C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resource
+19/03/15 16:04:17.059: [0x00000fa0] LOADER: setting [commandline]  dll=C:\dev\nsmith_nickpro3\sdk\teams\services\feature1\quick\target\win\quick_prebuilt_d.s86
+19/03/15 16:04:17.062: [0x00000fa0] LOADER: setting [commandline]  data=C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources
+19/03/15 16:04:17.065: [0x00000fa0] LOADER: setting [commandline]  app-icf1=C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\common.icf
+19/03/15 16:04:17.067: [0x00000fa0] LOADER: setting [commandline]  app-icf2=C:\Users\Nick\projects\s3eAndroidFullscreen\quick\AndroidFullscreenExample\resources\app.icf
+19/03/15 16:04:19.105: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_GAINED_FOCUS
+19/03/15 16:04:19.173: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_LOST_FOCUS
+19/03/15 16:04:19.285: [0x00000fa0] SPLASH: displaying debug splash-screen
+19/03/15 16:04:19.316: [0x00000fa0] LICENSE: LicenseType: ret true : output=Professional
+19/03/15 16:04:19.319: [0x00000fa0] SPLASH: No splash screen specified
+19/03/15 16:04:19.354: [0x00000fa0] LICENSE: LicenseType: ret true : output=Professional
+19/03/15 16:04:20.084: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_GAINED_FOCUS
+19/03/15 16:04:20.113: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_LOST_FOCUS
+19/03/15 16:04:24.786: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_GAINED_FOCUS
+19/03/15 16:04:24.793: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_LOST_FOCUS
+COCOS2DX LOG: cocos2d: cocos2d-2.1beta3-x-2.1.0
+19/03/15 16:04:24.822: [00000FA0] IW_GL: EGL: eglGetDisplay returned 073C2F30
+19/03/15 16:04:24.835: [00000FA0] IW_GL: eglInitialise succeeded - version 1.4
+19/03/15 16:04:24.838: [00000FA0] IW_GL: S3E_EGL_VERSION: 0104
+19/03/15 16:04:24.842: [00000FA0] IW_GL: S3E_GL_VERSION: 0200
+19/03/15 16:04:24.846: [00000FA0] IW_GL: EGL_VENDOR: Google Inc.
+19/03/15 16:04:24.850: [00000FA0] IW_GL: EGL_VERSION: 1.4 (ANGLE 1.0.0.1275)
+19/03/15 16:04:24.853: [00000FA0] IW_GL:     EGL_EXT_create_context_robustness
+19/03/15 16:04:24.857: [00000FA0] IW_GL:     EGL_ANGLE_d3d_share_handle_client_buffer
+19/03/15 16:04:24.860: [00000FA0] IW_GL:     EGL_ANGLE_query_surface_pointer
+19/03/15 16:04:24.862: [00000FA0] IW_GL:     EGL_ANGLE_surface_d3d_texture_2d_share_handle
+19/03/15 16:04:24.865: [00000FA0] IW_GL:     EGL_NV_post_sub_buffer
+19/03/15 16:04:24.868: [00000FA0] GL_CORE: rejecting config 0: EGL_DEPTH_SIZE < 16
+19/03/15 16:04:24.871: [00000FA0] GL_CORE: rejecting config 4: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.873: [00000FA0] GL_CORE: rejecting config 5 RGB < 565
+19/03/15 16:04:24.876: [00000FA0] GL_CORE: rejecting config 6: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.879: [00000FA0] GL_CORE: rejecting config 7 RGB < 565
+19/03/15 16:04:24.881: [00000FA0] GL_CORE: rejecting config 8: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.884: [00000FA0] GL_CORE: rejecting config 9 RGB < 565
+19/03/15 16:04:24.886: [00000FA0] GL_CORE: rejecting config 10: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.889: [00000FA0] GL_CORE: rejecting config 11 RGB < 565
+19/03/15 16:04:24.892: [00000FA0] GL_CORE: rejecting config 12: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.895: [00000FA0] GL_CORE: rejecting config 13: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.897: [00000FA0] GL_CORE: rejecting config 14: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.900: [00000FA0] GL_CORE: rejecting config 15: EGL_CONFIG_CAVEAT == EGL_SLOW_CONFIG
+19/03/15 16:04:24.903: [00000FA0] GL_CORE: EGL: Chose EGL_CONFIG_ID 3
+19/03/15 16:04:24.939: [00000FA0] IW_GL: GL_VENDOR: Google Inc.
+19/03/15 16:04:24.943: [00000FA0] IW_GL: GL_RENDERER: ANGLE (Intel(R) HD Graphics Family)
+19/03/15 16:04:24.945: [00000FA0] IW_GL: GL_VERSION: OpenGL ES 2.0 (ANGLE 1.0.0.1275)
+19/03/15 16:04:24.948: [00000FA0] IW_GL: GL properties reported by driver:
+19/03/15 16:04:24.951: [00000FA0] IW_GL:     GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS: 20
+19/03/15 16:04:24.954: [00000FA0] IW_GL:     GL_SHADER_COMPILER: 1
+19/03/15 16:04:24.957: [00000FA0] IW_GL:     GL_MAX_VERTEX_ATTRIBS: 16
+19/03/15 16:04:24.960: [00000FA0] IW_GL:     GL_MAX_VERTEX_UNIFORM_VECTORS: 254
+19/03/15 16:04:24.963: [00000FA0] IW_GL:     GL_MAX_VARYING_VECTORS: 10
+19/03/15 16:04:24.966: [00000FA0] IW_GL:     GL_MAX_TEXTURE_IMAGE_UNITS: 16
+19/03/15 16:04:24.969: [00000FA0] IW_GL:     GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS: 4
+19/03/15 16:04:24.972: [00000FA0] IW_GL:     GL_MAX_FRAGMENT_UNIFORM_VECTORS: 221
+19/03/15 16:04:24.975: [00000FA0] IW_GL:     GL_MAX_CUBE_MAP_TEXTURE_SIZE: 8192
+19/03/15 16:04:24.978: [00000FA0] IW_GL:     GL_IMPLEMENTATION_COLOR_READ_FORMAT: GL_RGB
+19/03/15 16:04:24.980: [00000FA0] IW_GL:     GL_IMPLEMENTATION_COLOR_READ_TYPE: GL_UNSIGNED_SHORT_5_6_5
+19/03/15 16:04:24.983: [00000FA0] IW_GL:     GL_MAX_RENDERBUFFER_SIZE: 8192
+19/03/15 16:04:24.986: [00000FA0] IW_GL:     GL_POINT_SIZE_MAX: -1
+19/03/15 16:04:24.988: [00000FA0] IW_GL:     GL_MAX_TEXTURE_SIZE: 8192
+19/03/15 16:04:24.991: [00000FA0] IW_GL:     GL_MAX_VIEWPORT_DIMS: (8192, 8192)
+19/03/15 16:04:24.994: [00000FA0] IW_GL: Supported GL_EXTENSIONS:
+19/03/15 16:04:24.997: [00000FA0] IW_GL:     GL_OES_packed_depth_stencil
+19/03/15 16:04:25.000: [00000FA0] IW_GL:     GL_OES_element_index_uint
+19/03/15 16:04:25.005: [00000FA0] IW_GL:     GL_OES_texture_half_float_linear
+19/03/15 16:04:25.011: [00000FA0] IW_GL:     GL_NV_fence
+19/03/15 16:04:25.014: [00000FA0] IW_GL:     GL_EXT_read_format_bgra
+19/03/15 16:04:25.017: [00000FA0] IW_GL:     GL_OES_get_program_binary
+19/03/15 16:04:25.020: [00000FA0] IW_GL:     GL_OES_rgb8_rgba8
+19/03/15 16:04:25.023: [00000FA0] IW_GL:     GL_EXT_texture_compression_dxt1
+19/03/15 16:04:25.026: [00000FA0] IW_GL:     GL_ANGLE_texture_compression_dxt3
+19/03/15 16:04:25.028: [00000FA0] IW_GL:     GL_ANGLE_texture_compression_dxt5
+19/03/15 16:04:25.031: [00000FA0] IW_GL:     GL_ARB_texture_env_combine
+19/03/15 16:04:25.034: [00000FA0] IW_GL:     GL_OES_texture_npot
+19/03/15 16:04:25.037: [00000FA0] IW_GL:     GL_EXT_texture_format_BGRA8888
+19/03/15 16:04:25.039: [00000FA0] IW_GL:     GL_OES_texture_half_float
+19/03/15 16:04:25.042: [00000FA0] IW_GL:     GL_ANGLE_framebuffer_multisample
+19/03/15 16:04:25.045: [00000FA0] IW_GL:     GL_ANGLE_framebuffer_blit
+19/03/15 16:04:25.047: [00000FA0] IW_GL:     GL_OES_standard_derivatives
+19/03/15 16:04:25.050: [00000FA0] IW_GL:     GL_OES_texture_float
+19/03/15 16:04:25.053: [00000FA0] IW_GL:     GL_OES_texture_float_linear
+19/03/15 16:04:25.056: [00000FA0] IW_GL:     GL_EXT_texture_filter_anisotropic
+19/03/15 16:04:25.059: [00000FA0] IW_GL:     GL_ANGLE_depth_texture
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path arial.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path fonts/arial.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path fonts/marker felt.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path arial.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path fonts/arial.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path fonts/marker felt.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path arial.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path fonts/arial.ttf not found
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path fonts/marker felt.ttf not found
+
+
+QUICKCPP LOG: Marmalade Quick 1.1
+QUICKCPP LOG: Loading app configuration...
+ERROR: S3E_FILE_ERR_NOT_FOUND in s3eFileOpen - Path config.lua not found
+QUICKCPP WARNING: Failed to load config lua file
+QUICKCPP LOG: Loading Quick engine...
+COCOS2DX LOG: cocos2d: GL_VENDOR:     Google Inc.
+COCOS2DX LOG: cocos2d: GL_RENDERER:   ANGLE (Intel(R) HD Graphics Family)
+COCOS2DX LOG: cocos2d: GL_VERSION:    OpenGL ES 2.0 (ANGLE 1.0.0.1275)
+COCOS2DX LOG: cocos2d: GL_MAX_TEXTURE_SIZE: 8192
+COCOS2DX LOG: cocos2d: GL_MAX_TEXTURE_UNITS: 20
+COCOS2DX LOG: cocos2d: GL supports PVRTC: NO
+COCOS2DX LOG: cocos2d: GL supports BGRA8888 textures: NO
+COCOS2DX LOG: cocos2d: GL supports NPOT textures: YES
+COCOS2DX LOG: cocos2d: GL supports discard_framebuffer: NO
+COCOS2DX LOG: cocos2d: GL supports shareable VAO: NO
+COCOS2DX LOG: cocos2d: compiled with Profiling Support: NO
+QUICKCPP LOG: Loading app...
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+COCOS2DX LOG: cocos2d: padding: 1,1,1,1
+19/03/15 16:04:30.093: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_GAINED_FOCUS
+QUICKCPP ERROR: [string "main.lua"]:18: attempt to index global 'androidFullscreen' (a nil value)
+QUICKCPP ERROR: [string "main.lua"]:18: attempt to index global 'androidFullscreen' (a nil value)
+QUICKCPP ERROR: [string "main.lua"]:18: attempt to index global 'androidFullscreen' (a nil value)
+QUICKCPP ERROR: [string "main.lua"]:18: attempt to index global 'androidFullscreen' (a nil value)
+QUICKCPP ERROR: [string "main.lua"]:20: attempt to index global 'androidFullscreen' (a nil value)
+QUICKCPP ERROR: [string "main.lua"]:20: attempt to index global 'androidFullscreen' (a nil value)
+QUICKCPP ERROR: [string "main.lua"]:22: attempt to index global 'androidFullscreen' (a nil value)
+19/03/15 16:04:43.478: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_LOST_FOCUS
+19/03/15 16:04:48.281: [0x00000344] WINDOW: Enqueuing S3E_WINDOW_GAINED_FOCUS
+19/03/15 16:04:48.389: [00000FA0] IW_GL: Leaked Program with handle 2
+19/03/15 16:04:48.399: [00000FA0] IW_GL: Leaked Program with handle 5
+19/03/15 16:04:48.408: [00000FA0] IW_GL: Leaked Texture with handle 1
+19/03/15 16:04:48.418: [00000FA0] IW_GL: Leaked VBO with handle 1
+19/03/15 16:04:48.425: [00000FA0] IW_GL: Leaked VBO with handle 2
+19/03/15 16:04:48.430: [00000FA0] IW_GL: Leaked VBO with handle 3
+19/03/15 16:04:48.435: [00000FA0] IW_GL: Leaked VBO with handle 4
+19/03/15 16:04:48.440: [00000FA0] IW_GL: Leaked VBO with handle 5
+19/03/15 16:04:48.444: [00000FA0] IW_GL: Leaked VBO with handle 6
+19/03/15 16:04:48.451: [00000FA0] IW_GL: Leaked VBO with handle 7
+19/03/15 16:04:48.456: [00000FA0] IW_GL: Leaked VBO with handle 8
+19/03/15 16:04:48.459: [00000FA0] IW_GL: Leaked VBO with handle 9
+19/03/15 16:04:48.462: [00000FA0] IW_GL: Leaked VBO with handle 10
+19/03/15 16:04:48.464: [00000FA0] IW_GL: Leaked VBO with handle 11
+19/03/15 16:04:48.467: [00000FA0] IW_GL: Leaked VBO with handle 12
+19/03/15 16:04:48.470: [00000FA0] IW_GL: Leaked VBO with handle 13
+19/03/15 16:04:48.473: [00000FA0] IW_GL: Leaked VBO with handle 14
+19/03/15 16:04:48.476: [00000FA0] IW_GL: Terminating EGL...
+19/03/15 16:04:48.484: [00000FA0] IW_GL: Terminating EGL... Done
+COCOS2DX LOG: cocos2d: deallocing CCDirector 05A52708
+COCOS2DX LOG: cocos2d: cocos2d-2.1beta3-x-2.1.0
+COCOS2DX LOG: cocos2d: deallocing CCDirector 05A52708
+-- END TRACE --

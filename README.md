@@ -130,6 +130,13 @@ put the extension on global modules path or copied to sdk/extensions.
 To use the Quick APIs
 ~~~~~~~~~~~~~~~~~~~~~
 
+You need to add the following to your app project:
+
+        subprojects
+        {
+            s3eAndroidFullscreen/quick/QAndroidFullscreen
+        }
+
 **NB:** If updating an existing project, you'll likely need to delete the
 project's 'build_temp' folder. This is so that the Hub will regenerate all the
 necessary deployment scripts and include the new extension.

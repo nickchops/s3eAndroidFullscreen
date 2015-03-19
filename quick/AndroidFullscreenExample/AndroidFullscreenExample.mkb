@@ -31,6 +31,11 @@ assets
         .
 }
 
+subprojects
+{
+    s3eAndroidFullscreen/quick/QAndroidFullscreen
+}
+
 deployments
 {
     ["Windows"]
@@ -43,4 +48,7 @@ deployments
 
     # Ensure subsequent options set on "Default" configuration
     ["Default"]
+    
+    # App ID for Facebook apps
+    android-extra-strings='(app_id,fb_app_id)'
 }
