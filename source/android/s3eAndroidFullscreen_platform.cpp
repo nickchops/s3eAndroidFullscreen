@@ -17,21 +17,6 @@ static jobject g_Obj;
 static jmethodID g_s3eAndroidFullscreenIsImmersiveSupported;
 static jmethodID g_s3eAndroidFullscreenOn;
 static jmethodID g_s3eAndroidFullscreenOff;
-static jmethodID g_onWindowFocusChanged;
-
-// Callback to re-enable sticky navbar
-// s3eEdkThreadRunOnOS needed to call UI functions
-static void* _s3eAndroidFullscreenResume()
-{
-	JNIEnv* env = s3eEdkJNIGetEnv();
-    env->CallVoidMethod(g_Obj, g_onWindowFocusChanged, true);
-}
-static int32 _s3eAndroidFullscreenResumeCallback(void* systemData, void* userData)
-{
-    IwTrace(ANDROID_FULLSCREEN, ("re-hiding nav bar on resume (if sticky mode is on)"));
-	s3eEdkThreadRunOnOS(_s3eAndroidFullscreenResume, 0);
-    return 0;
-}
 
 s3eResult s3eAndroidFullscreenInit_platform()
 {
@@ -41,7 +26,7 @@ s3eResult s3eAndroidFullscreenInit_platform()
     jmethodID cons = NULL;
 
     // Get the extension class
-    jclass cls = s3eEdkAndroidFindClass("s3eAndroidFullscreen");
+    jclass cls = s3eEdkAndroidFindClass("com/nickchops/s3eAndroidFullscreen/s3eAndroidFullscreen");
     if (!cls)
         goto fail;
 
@@ -68,25 +53,10 @@ s3eResult s3eAndroidFullscreenInit_platform()
     if (!g_s3eAndroidFullscreenOff)
         goto fail;
 
-	//non-public callback
-	g_onWindowFocusChanged = env->GetMethodID(cls, "onWindowFocusChanged", "(Z)V");
-    if (!g_onWindowFocusChanged)
-        goto fail;
-
     IwTrace(ANDROIDFULLSCREEN, ("ANDROIDFULLSCREEN init success"));
     g_Obj = env->NewGlobalRef(obj);
     env->DeleteLocalRef(obj);
     env->DeleteGlobalRef(cls);
-
-    if (s3eAndroidFullscreenIsImmersiveSupported() == S3E_TRUE)
-    {
-    	// Using device resume callback to re-apply sticky mode fullscreen as OS will have turned
-		// it off (see java code for why we can't use android activity interface for this)
-		// Only want to do this for sticky mode - in non sticky mode the nav bar should always be
-		// shown on resume as there's no way of telling if the OS or the user has shown it
-        if (s3eDeviceRegister(S3E_DEVICE_UNPAUSE, _s3eAndroidFullscreenResumeCallback, NULL) != S3E_RESULT_SUCCESS)
-            IwTrace(ANDROID_FULLSCREEN, ("failed to register callback to re-hide nav bar on app resume"));
-	}
 
     // Add any platform-specific initialisation code here
     return S3E_RESULT_SUCCESS;
@@ -104,10 +74,6 @@ fail:
 
 void s3eAndroidFullscreenTerminate_platform()
 {
-	if (s3eAndroidFullscreenIsImmersiveSupported() == S3E_TRUE)
-    {
-    	s3eDeviceUnRegister(S3E_DEVICE_UNPAUSE, _s3eAndroidFullscreenResumeCallback);
-    }
 }
 
 //-----------------

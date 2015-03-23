@@ -10,18 +10,18 @@ These functions are called via JNI from native code.
  * be overwritten (unless --force is specified) and is intended to be modified.
  */
 
-//package com.marmalade.s3eAndroidFullscreen; //Needed if we were to extend activity
+package com.nickchops.s3eAndroidFullscreen;
 
 import com.ideaworks3d.marmalade.LoaderAPI;
-import com.ideaworks3d.marmalade.LoaderActivity;
 import android.os.Build;
 import android.view.View;
 
-class s3eAndroidFullscreen //extends LoaderActivity
+
+public class s3eAndroidFullscreen
 {
-	private boolean m_sticky = false;
-    private boolean m_wantFullscreen = false;
-    private int m_stickyFlags = 0x0;
+	private static boolean m_sticky = false;
+    private static boolean m_wantFullscreen = false;
+    private static int m_stickyFlags = 0x0;
 
 	public boolean supported()
     {
@@ -101,7 +101,7 @@ class s3eAndroidFullscreen //extends LoaderActivity
        when the bars are re-shown. Will need an s3e callback and an Quick event wrapper for it...
        Jamie reports that Nav bar can come back in situations like volume key presses on some
        platform versions. In this situation, you ought to be using sticky mode anyway!
-
+    
     final View decorView = getWindow().getDecorView();
     decorView.setOnSystemUiVisibilityChangeListener (new View.OnSystemUiVisibilityChangeListener()
     {
@@ -124,22 +124,12 @@ class s3eAndroidFullscreen //extends LoaderActivity
 
     //----------------------------------------------------------------------------------
     /*
-    This is the correct way to re-set the sticky immersive mode flag. However it would require
-    extending the main/active activity (LoaderActivity) which is problematic as other extensions
-    then couldn't extend it and it makes manifest and package management a pain.
-    Current hacky solution: call this from within S3E_DEVICE_RESUME.
-    Better cheap solution: Get SDK team to integrate into loader
-    Slightly better: Open source the loader Java activity code so users can edit it.
-    Best solution: New loader mechanism for either some clever multiple inheritance
-    	thing that respects Android activity callbacks or some new custom callback
-    	registering method...
-
-    @Override
+    This needs to be called from the main activity.
+    NB: Use my s3eAndroidUserActivity mechanism to do that. You need to edit
+    and rebuild s3eAndroidUserActivity for this to work! 
     */
-    public void onWindowFocusChanged(boolean hasFocus)
+    public static void onWindowFocusChanged(boolean hasFocus)
     {
-        //super.onWindowFocusChanged(hasFocus); //not using Activity :(
-
         // For sticky mode, set the layout whenever we get focus, in case some
         // other window has changed the flags while out of focus
         if (m_wantFullscreen && m_sticky && hasFocus)

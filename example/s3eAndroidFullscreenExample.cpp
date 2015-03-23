@@ -16,11 +16,18 @@ static Button*     g_ButtonShow;
 static Button*     g_ButtonShowBars;
 static Button*     g_ButtonCheck;
 
-int32 _fullscreenCallaback(void* sys, void* user)
+//static Button*     g_LastButton = NULL;
+
+int32 _resumeCallback(void* sys, void* user)
 {
-    IwTrace(FULLSCREENTEST, ("!!callback called!!"));
-    s3eAndroidFullscreenOn();
-    return 0;
+    IwTrace(FULLSCREENTEST, ("App resumed, re-setting fullscreen"));
+	return 0;
+}
+
+int32 _pauseCallback(void* sys, void* user)
+{
+	IwTrace(FULLSCREENTEST, ("App paused"));
+	return 0;
 }
 
 void ExampleInit()
@@ -31,6 +38,9 @@ void ExampleInit()
     g_ButtonShow = NewButton("Show nav bar");
     g_ButtonShowBars = NewButton("Show nav & status bars if supported");
 	g_ButtonCheck = NewButton("Check available");
+
+	s3eDeviceRegister(S3E_DEVICE_PAUSE, _pauseCallback, NULL);
+	s3eDeviceRegister(S3E_DEVICE_UNPAUSE, _resumeCallback, NULL);
 }
 
 void ExampleTerm()

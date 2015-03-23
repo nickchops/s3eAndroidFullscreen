@@ -53,6 +53,8 @@ void s3eAndroidFullscreenOn(s3eBool immersive S3E_DEFAULT(S3E_TRUE), s3eBool sti
  */
 void s3eAndroidFullscreenOff(s3eBool showStatusBar S3E_DEFAULT(S3E_FALSE), s3eBool showNavBar S3E_DEFAULT(S3E_TRUE), s3eBool staticLayout S3E_DEFAULT(S3E_TRUE));
 
+// \cond HIDDEN_DEFINES
 S3E_END_C_DECL
+// \endcond
 
 #endif /* !S3E_EXT_ANDROIDFULLSCREEN_H */

@@ -33,7 +33,7 @@ assets
 
 subprojects
 {
-    s3eAndroidFullscreen/quick/QAndroidFullscreen
+    s3eAndroidFullscreen
 }
 
 deployments

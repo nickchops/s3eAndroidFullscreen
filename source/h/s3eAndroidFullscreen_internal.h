@@ -48,5 +48,7 @@ void s3eAndroidFullscreenOn_platform(s3eBool immersive, s3eBool stickyNavBar, s3
 
 void s3eAndroidFullscreenOff_platform(s3eBool showStatusBar, s3eBool showNavBar, s3eBool staticLayout);
 
+void s3eAndroidFullscreenResume_platform();
+
 
 #endif /* !S3EANDROIDFULLSCREEN_INTERNAL_H */

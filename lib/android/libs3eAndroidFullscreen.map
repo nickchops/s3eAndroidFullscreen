@@ -1,6 +1,6 @@
 Archive member included because of file (symbol)
 
-C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
                               release\s3eAndroidFullscreen_platform.os (s3eEdkThreadRunOnOS)
 
 Discarded input sections
@@ -28,15 +28,15 @@ Discarded input sections
                 0x00000000       0x98 release\s3eAndroidFullscreen_register.os
  .note.GNU-stack
                 0x00000000        0x0 release\s3eAndroidFullscreen_register.os
- .text          0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000       0x30 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00000000       0x30 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000       0x30 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00000000       0x30 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .text          0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
  .data          0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
  .bss           0x00000000        0x0 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
@@ -53,107 +53,103 @@ Memory map
 .interp         0x00000114       0x13
  ** fill        0x00000114       0x13
 
-.dynsym         0x00000128       0xe0
- ** dynsym      0x00000128       0xe0
+.dynsym         0x00000128       0xc0
+ ** dynsym      0x00000128       0xc0
 
-.dynstr         0x00000208      0x110
+.dynstr         0x000001e8       0xea
  ** string table
-                0x00000208      0x110
+                0x000001e8       0xea
 
-.hash           0x00000318       0x4c
- ** hash        0x00000318       0x4c
+.hash           0x000002d4       0x44
+ ** hash        0x000002d4       0x44
 
-.rel.dyn        0x00000364       0x30
+.rel.dyn        0x00000318       0x30
  ** dynamic relocs
-                0x00000364       0x30
+                0x00000318       0x30
 
-.rel.plt        0x00000394       0x30
+.rel.plt        0x00000348       0x20
  ** dynamic relocs
-                0x00000394       0x30
+                0x00000348       0x20
 
-.plt            0x000003c4       0x5c
- ** PLT         0x000003c4       0x5c
+.plt            0x00000368       0x44
+ ** PLT         0x00000368       0x44
 
-.text           0x00000420      0x6bc
- .text.exit     0x00000420       0x10 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
-                0x00000420                __on_dlclose
- .text._ZL35_s3eAndroidFullscreenResumeCallbackPvS_
-                0x00000430       0x20 release\s3eAndroidFullscreen_platform.os
+.text           0x000003ac      0x5d4
+ .text.exit     0x000003ac       0x10 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                0x000003ac                __on_dlclose
  .text._ZL27s3eEdkAndroidFindClass_realPKc
-                0x00000450       0xb8 release\s3eAndroidFullscreen_platform.os
+                0x000003bc       0xb8 release\s3eAndroidFullscreen_platform.os
  .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
-                0x00000508       0x38 release\s3eAndroidFullscreen_platform.os
-                0x00000508                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+                0x00000474       0x38 release\s3eAndroidFullscreen_platform.os
+                0x00000474                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
  .text._ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
-                0x00000540       0x38 release\s3eAndroidFullscreen_platform.os
-                0x00000540                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
+                0x000004ac       0x38 release\s3eAndroidFullscreen_platform.os
+                0x000004ac                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
  .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
-                0x00000578       0x38 release\s3eAndroidFullscreen_platform.os
-                0x00000578                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
- .text._ZL27_s3eAndroidFullscreenResumev
-                0x000005b0       0x50 release\s3eAndroidFullscreen_platform.os
+                0x000004e4       0x38 release\s3eAndroidFullscreen_platform.os
+                0x000004e4                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
  .text._Z33s3eAndroidFullscreenInit_platformv
-                0x00000600      0x23c release\s3eAndroidFullscreen_platform.os
-                0x00000600                s3eAndroidFullscreenInit_platform()
+                0x0000051c      0x1e4 release\s3eAndroidFullscreen_platform.os
+                0x0000051c                s3eAndroidFullscreenInit_platform()
  .text._Z38s3eAndroidFullscreenTerminate_platformv
-                0x0000083c       0x24 release\s3eAndroidFullscreen_platform.os
-                0x0000083c                s3eAndroidFullscreenTerminate_platform()
+                0x00000700        0x4 release\s3eAndroidFullscreen_platform.os
+                0x00000700                s3eAndroidFullscreenTerminate_platform()
  .text._Z49s3eAndroidFullscreenIsImmersiveSupported_platformv
-                0x00000860       0x50 release\s3eAndroidFullscreen_platform.os
-                0x00000860                s3eAndroidFullscreenIsImmersiveSupported_platform()
+                0x00000704       0x50 release\s3eAndroidFullscreen_platform.os
+                0x00000704                s3eAndroidFullscreenIsImmersiveSupported_platform()
  .text._Z31s3eAndroidFullscreenOn_platformhhh
-                0x000008b0       0x68 release\s3eAndroidFullscreen_platform.os
-                0x000008b0                s3eAndroidFullscreenOn_platform(unsigned char, unsigned char, unsigned char)
+                0x00000754       0x68 release\s3eAndroidFullscreen_platform.os
+                0x00000754                s3eAndroidFullscreenOn_platform(unsigned char, unsigned char, unsigned char)
  .text._Z32s3eAndroidFullscreenOff_platformhhh
-                0x00000918       0x68 release\s3eAndroidFullscreen_platform.os
-                0x00000918                s3eAndroidFullscreenOff_platform(unsigned char, unsigned char, unsigned char)
+                0x000007bc       0x68 release\s3eAndroidFullscreen_platform.os
+                0x000007bc                s3eAndroidFullscreenOff_platform(unsigned char, unsigned char, unsigned char)
  .text._Z24s3eAndroidFullscreenInitv
-                0x00000980        0x4 release\s3eAndroidFullscreen.os
-                0x00000980                s3eAndroidFullscreenInit()
+                0x00000824        0x4 release\s3eAndroidFullscreen.os
+                0x00000824                s3eAndroidFullscreenInit()
  .text._Z29s3eAndroidFullscreenTerminatev
-                0x00000984        0x4 release\s3eAndroidFullscreen.os
-                0x00000984                s3eAndroidFullscreenTerminate()
+                0x00000828        0x4 release\s3eAndroidFullscreen.os
+                0x00000828                s3eAndroidFullscreenTerminate()
  .text.s3eAndroidFullscreenIsImmersiveSupported
-                0x00000988        0x4 release\s3eAndroidFullscreen.os
-                0x00000988                s3eAndroidFullscreenIsImmersiveSupported
+                0x0000082c        0x4 release\s3eAndroidFullscreen.os
+                0x0000082c                s3eAndroidFullscreenIsImmersiveSupported
  .text.s3eAndroidFullscreenOn
-                0x0000098c        0x4 release\s3eAndroidFullscreen.os
-                0x0000098c                s3eAndroidFullscreenOn
+                0x00000830        0x4 release\s3eAndroidFullscreen.os
+                0x00000830                s3eAndroidFullscreenOn
  .text.s3eAndroidFullscreenOff
-                0x00000990        0x4 release\s3eAndroidFullscreen.os
-                0x00000990                s3eAndroidFullscreenOff
+                0x00000834        0x4 release\s3eAndroidFullscreen.os
+                0x00000834                s3eAndroidFullscreenOff
  .text._ZL28s3eAndroidFullscreenOff_wraphhh
-                0x00000994       0x40 release\s3eAndroidFullscreen_register.os
+                0x00000838       0x40 release\s3eAndroidFullscreen_register.os
  .text._ZL27s3eAndroidFullscreenOn_wraphhh
-                0x000009d4       0x40 release\s3eAndroidFullscreen_register.os
+                0x00000878       0x40 release\s3eAndroidFullscreen_register.os
  .text.RegisterExt
-                0x00000a14       0x98 release\s3eAndroidFullscreen_register.os
-                0x00000a14                RegisterExt
+                0x000008b8       0x98 release\s3eAndroidFullscreen_register.os
+                0x000008b8                RegisterExt
  .text.s3eEdkThreadRunOnOS
-                0xffffffffffffffff       0x30 C:\marmalade\7.5.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
-                0x00000aac                s3eEdkThreadRunOnOS
+                0xffffffffffffffff       0x30 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00000950                s3eEdkThreadRunOnOS
 
-.rodata         0x00000adc       0xa9
+.rodata         0x00000980       0xc1
  ** merge strings
-                0x00000adc       0xa9
+                0x00000980       0xc1
 
-.fini_array     0x00001edc        0x8
- .fini_array    0x00001edc        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
- .fini_array    0x00001ee0        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+.fini_array     0x00001ee4        0x8
+ .fini_array    0x00001ee4        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .fini_array    0x00001ee8        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
-.init_array     0x00001ee4        0x4
- .init_array    0x00001ee4        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+.init_array     0x00001eec        0x4
+ .init_array    0x00001eec        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
-.dynamic        0x00001ee8       0xe0
- ** dynamic     0x00001ee8       0xe0
+.dynamic        0x00001ef0       0xe0
+ ** dynamic     0x00001ef0       0xe0
 
-.got            0x00001fc8       0x38
- ** GOT         0x00001fc8       0x14
- ** GOT PLT     0x00001fdc       0x24
+.got            0x00001fd0       0x30
+ ** GOT         0x00001fd0       0x14
+ ** GOT PLT     0x00001fe4       0x1c
 
 .data           0x00002000        0x4
  .data          0x00002000        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
                 0x00002000                __dso_handle
 
-.bss            0x00002004       0x14
- .bss           0x00002004       0x14 release\s3eAndroidFullscreen_platform.os
+.bss            0x00002004       0x10
+ .bss           0x00002004       0x10 release\s3eAndroidFullscreen_platform.os
