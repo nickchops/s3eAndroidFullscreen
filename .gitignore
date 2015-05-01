@@ -8,3 +8,4 @@
 *build_*
 *.stamp
 mobdebug.lua
+s3eAndroidUserActivity/**
