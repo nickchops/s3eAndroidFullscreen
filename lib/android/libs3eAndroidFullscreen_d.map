@@ -1,11 +1,11 @@
 Archive member included because of file (symbol)
 
-C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                              debug\s3eAndroidFullscreen_platform.os (IwDebugTraceIsChannelOn)
-C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
                               debug\s3eAndroidFullscreen_platform.os (s3eEdkThreadRunOnOS)
+C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                              debug\s3eAndroidFullscreen_platform.os (IwDebugTraceIsChannelOn)
 c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(_aeabi_ldivmod.o)
-                              C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o) (__aeabi_ldivmod)
+                              C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o) (__aeabi_ldivmod)
 c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(_dvmd_lnx.o)
                               c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
 c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(bpabi.o)
@@ -55,43 +55,43 @@ Discarded input sections
  .bss           0x00000000        0x0 debug\s3eAndroidFullscreen_register.os
  .note.GNU-stack
                 0x00000000        0x0 debug\s3eAndroidFullscreen_register.os
- .text          0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .data          0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugClearConfigCache
-                0x00000000       0x80 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugAssertIsChannelOn
-                0x00000000      0x1ec C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugAssertShow
-                0x00000000      0x2e8 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugAssertSetSolution
-                0x00000000       0xb4 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugAssertSetMessage
-                0x00000000       0xfc C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwAssertRegisterTextCallback
-                0x00000000       0x1c C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwAssertRegisterCallback
-                0x00000000       0x1c C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugTraceDisable
-                0x00000000       0x10 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugTraceChannelSwitch
-                0x00000000      0x1e4 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugErrorRegisterCallback
-                0x00000000       0x1c C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugErrorShow
-                0x00000000      0x108 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text.IwDebugAssertSetUID
-                0x00000000       0x14 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
- .text          0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000       0x30 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00000000       0x30 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000       0x30 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00000000       0x30 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .data          0x00000000        0x0 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugClearConfigCache
+                0x00000000       0x80 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugAssertIsChannelOn
+                0x00000000      0x1ec C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugAssertShow
+                0x00000000      0x2e8 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugAssertSetSolution
+                0x00000000       0xb4 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugAssertSetMessage
+                0x00000000       0xfc C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwAssertRegisterTextCallback
+                0x00000000       0x1c C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwAssertRegisterCallback
+                0x00000000       0x1c C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugTraceDisable
+                0x00000000       0x10 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugTraceChannelSwitch
+                0x00000000      0x1e4 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugErrorRegisterCallback
+                0x00000000       0x1c C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugErrorShow
+                0x00000000      0x108 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .text.IwDebugAssertSetUID
+                0x00000000       0x14 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .note.GNU-stack
+                0x00000000        0x0 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
  .data          0x00000000        0x0 c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(_aeabi_ldivmod.o)
  .bss           0x00000000        0x0 c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(_aeabi_ldivmod.o)
  .note.GNU-stack
@@ -172,7 +172,7 @@ Memory map
  .text.exit     0x000011c8       0x10 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
                 0x000011c8                __on_dlclose
  .text.startup._GLOBAL__sub_I_IwDebug.cpp
-                0x000011d8       0x88 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x000011d8       0x88 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
  .text._ZN7_JNIEnv9FindClassEPKc
                 0x00001260       0x38 debug\s3eAndroidFullscreen_platform.os
                 0x00001260                _JNIEnv::FindClass(char const*)
@@ -255,21 +255,21 @@ Memory map
  .text.RegisterExt
                 0x00001d30        0xc debug\s3eAndroidFullscreen_register.os
                 0x00001d30                RegisterExt
- .text.IwDebugTraceIsChannelOn
-                0x00001d3c      0x27c C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                0x00001d3c                IwDebugTraceIsChannelOn
- .text.IwDebugTraceSetTraceChannel
-                0x00001fb8       0x1c C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                0x00001fb8                IwDebugTraceSetTraceChannel
- .text.IwDebugTraceLineVPrintf
-                0x00001fd4       0xfc C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                0x00001fd4                IwDebugTraceLineVPrintf
- .text.IwDebugTraceLinePrintf
-                0x000020d0       0x30 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                0x000020d0                IwDebugTraceLinePrintf
  .text.s3eEdkThreadRunOnOS
-                0x00002100       0x30 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
-                0x00002100                s3eEdkThreadRunOnOS
+                0x00001d3c       0x30 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00001d3c                s3eEdkThreadRunOnOS
+ .text.IwDebugTraceIsChannelOn
+                0x00001d6c      0x27c C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00001d6c                IwDebugTraceIsChannelOn
+ .text.IwDebugTraceSetTraceChannel
+                0x00001fe8       0x1c C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00001fe8                IwDebugTraceSetTraceChannel
+ .text.IwDebugTraceLineVPrintf
+                0x00002004       0xfc C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00002004                IwDebugTraceLineVPrintf
+ .text.IwDebugTraceLinePrintf
+                0x00002100       0x30 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00002100                IwDebugTraceLinePrintf
  .text          0x00002130       0x44 c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(_aeabi_ldivmod.o)
                 0x00002130                __aeabi_ldivmod
  .text          0x00002174       0x10 c:/android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.8/libgcc.a(_dvmd_lnx.o)
@@ -360,7 +360,7 @@ Memory map
  .fini_array    0x00005e88        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
 .init_array     0x00005e8c        0x8
- .init_array    0x00005e8c        0x4 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .init_array    0x00005e8c        0x4 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
  .init_array    0x00005e90        0x4 C:/Android/android-ndk-r9d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
 .dynamic        0x00005e94       0xe0
@@ -376,5 +376,5 @@ Memory map
 
 .bss            0x00006004     0x1a38
  .bss           0x00006004       0x10 debug\s3eAndroidFullscreen_platform.os
- .bss           0x00006014     0x1a28 C:\marmalade\7.6.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
+ .bss           0x00006014     0x1a28 C:\marmalade\7.7.0\s3e\edk\lib\android/libedk.a(IwDebug.o)
                 0x00006014                g_DebugGlobals

@@ -11,10 +11,11 @@
 #include "s3eAndroidFullscreen.h"
 
 
+// Define S3E_EXT_SKIP_LOADER_CALL_LOCK on the user-side to skip LoaderCallStart/LoaderCallDone()-entry.
+// e.g. in s3eNUI this is used for generic user-side IwUI-based implementation.
 #ifndef S3E_EXT_SKIP_LOADER_CALL_LOCK
-// For MIPs (and WP8) platform we do not have asm code for stack switching
-// implemented. So we make LoaderCallStart call manually to set GlobalLock
-#if defined __mips || defined S3E_ANDROID_X86 || (defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP))
+#if defined I3D_ARCH_MIPS || defined S3E_ANDROID_X86 || (defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)) || defined I3D_ARCH_NACLX86_64
+// For platforms missing stack-switching (MIPS, WP8, Android-x86, NaCl, etc.) make loader-entry via LoaderCallStart/LoaderCallDone() on the user-side.
 #define LOADER_CALL_LOCK
 #endif
 #endif
@@ -87,13 +88,13 @@ s3eBool s3eAndroidFullscreenIsImmersiveSupported()
         return S3E_FALSE;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_s3eAndroidFullscreenIsImmersiveSupported);
 #endif
 
     s3eBool ret = g_Ext.m_s3eAndroidFullscreenIsImmersiveSupported();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_s3eAndroidFullscreenIsImmersiveSupported);
 #endif
 
     return ret;
@@ -107,13 +108,13 @@ void s3eAndroidFullscreenOn(s3eBool immersive, s3eBool stickyNavBar, s3eBool sta
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_s3eAndroidFullscreenOn);
 #endif
 
     g_Ext.m_s3eAndroidFullscreenOn(immersive, stickyNavBar, staticLayout);
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_s3eAndroidFullscreenOn);
 #endif
 
     return;
@@ -127,13 +128,13 @@ void s3eAndroidFullscreenOff(s3eBool showStatusBar, s3eBool showNavBar, s3eBool 
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_s3eAndroidFullscreenOff);
 #endif
 
     g_Ext.m_s3eAndroidFullscreenOff(showStatusBar, showNavBar, staticLayout);
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_s3eAndroidFullscreenOff);
 #endif
 
     return;
